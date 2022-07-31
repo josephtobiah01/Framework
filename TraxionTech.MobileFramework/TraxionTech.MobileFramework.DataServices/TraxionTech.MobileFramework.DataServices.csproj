@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Configurations>Debug;Release;Uat</Configurations>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Constants\TraxionPay\**" />
+    <EmbeddedResource Remove="Constants\TraxionPay\**" />
+    <None Remove="Constants\TraxionPay\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\TraxionPay\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="System.Net.Http.Json" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TraxionTech.MobileFramework.DataServices.Interfaces\TraxionTech.MobileFramework.DataServices.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>
